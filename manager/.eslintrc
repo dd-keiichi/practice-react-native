@@ -6,5 +6,8 @@
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "import/extensions": [<severity>, "never"],
+        "arrow-body-style": 0,
+        "import/prefer-default-export": 0,
+        "no-use-before-define": 0,
     }
 }
