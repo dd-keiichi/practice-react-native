@@ -3,10 +3,11 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 import reducers from './reducers';
 import Router from './Router';
 
-const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
+const store = createStore(reducers, {}, composeWithDevTools(applyMiddleware(ReduxThunk)));
 
 class App extends Component {
   componentWillMount() {
